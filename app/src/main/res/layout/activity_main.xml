@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.mfh.mjl.mmlibrary.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="花花小傻掉"
-        android:textSize="30sp" />
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="严肃点，这个项目里面所有的东西，都是为了之后工作打下基础，不要搞事情，好好干！"
+        android:textColor="black"
+        android:textSize="20sp" />
 
-</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        android:onClick="openNewEarth"
+        android:text="点击进入新的世界！" />
+
+</RelativeLayout>
