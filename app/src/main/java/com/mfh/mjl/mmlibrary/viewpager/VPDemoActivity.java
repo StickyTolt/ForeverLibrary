@@ -36,6 +36,7 @@ public class VPDemoActivity extends UI {
         assist = VPDemoUtil.getInstance(this);
 
         assist.setTopVp(vpTop);
+
     }
 
     @Override
