@@ -3,7 +3,7 @@ package com.mfh.mjl.mmlibrary.viewpager;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.Toast;
 
 import com.mfh.mjl.mmlibrary.R;
 import com.mfh.mjl.mmlibrary.viewpager.adapter.TopResAdapter;
@@ -17,6 +17,8 @@ import java.util.List;
  */
 
 public class VPDemoUtil {
+
+    private static final String TAG = VPDemoUtil.class.getSimpleName();
 
     public static final int CODE_VP_TOP = 1000;
 
@@ -50,6 +52,16 @@ public class VPDemoUtil {
     public void setTopVp(ViewPager vp) {
         vp.setAdapter(new TopResAdapter(getTopData()));
         assist.setVpLoop(vp, CODE_VP_TOP, 3000);
+        setVpClick(vp);
+    }
+
+    public void setVpClick(ViewPager vp) {
+        VpUtil.getInstance().setVpClick(vp, new VpUtil.IVpClickListener() {
+            @Override
+            public void onClick(int position) {
+                Toast.makeText(context, "onClick: 你点击的条目是    ===    " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public List<ImageView> getTopData() {

@@ -4,6 +4,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -112,6 +114,43 @@ public class VpUtil {
      */
     public void stopLoop(int code) {
         handler.removeMessages(code);
+    }
+
+    /**
+     * 设置ViewPager的点击事件
+     *
+     * @param vp
+     * @param listener
+     */
+    public void setVpClick(final ViewPager vp, final IVpClickListener listener) {
+        if (vp == null) {
+            return;
+        }
+        vp.setOnTouchListener(new View.OnTouchListener() {
+            int flagTouch = 0;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        flagTouch = 0;
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        flagTouch = 1;
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        if (flagTouch == 0 && listener != null) {
+                            listener.onClick(vp.getCurrentItem());
+                        }
+                        break;
+                }
+                return false;
+            }
+        });
+    }
+
+    public interface IVpClickListener {
+        void onClick(int position);
     }
 
 }

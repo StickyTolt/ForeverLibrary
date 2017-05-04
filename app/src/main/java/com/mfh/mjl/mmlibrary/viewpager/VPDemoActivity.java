@@ -36,12 +36,19 @@ public class VPDemoActivity extends UI {
         assist = VPDemoUtil.getInstance(this);
 
         assist.setTopVp(vpTop);
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         assist.startVpLoop(VPDemoUtil.CODE_VP_TOP);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        assist.stopVpLoop(VPDemoUtil.CODE_VP_TOP);
     }
 
     public void stopLoop(View view) {
