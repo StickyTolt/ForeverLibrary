@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.mfh.mjl.mmlibrary.total.TotalShowActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,6 +15,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openNewEarth(View view) {
-
+        TotalShowActivity.start(this);
     }
 }

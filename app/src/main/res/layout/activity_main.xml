@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:padding="24dp"
         android:text="严肃点，这个项目里面所有的东西，都是为了之后工作打下基础，不要搞事情，好好干！"
-        android:textColor="black"
         android:textSize="20sp" />
 
     <Button
