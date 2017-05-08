@@ -10,7 +10,10 @@ import com.youhuikeji.martin.alllibrary.base.UI;
 public class TotalActivity extends UI {
 
     private static final String TAG = TotalActivity.class.getSimpleName();
+
     private Button btnJumpVp;
+    private Button btnTimeSelect;
+
     private TotalUtil assist;
 
 
@@ -26,12 +29,14 @@ public class TotalActivity extends UI {
 
     protected void bindView() {
         btnJumpVp = findView(R.id.btn_jump_vp);
+        btnTimeSelect = findView(R.id.btn_time_select);
     }
 
     protected void initView() {
         assist = TotalUtil.getInstance(this);
 
         assist.setOnClick(btnJumpVp);
+        assist.setOnClick(btnTimeSelect);
     }
 
 }

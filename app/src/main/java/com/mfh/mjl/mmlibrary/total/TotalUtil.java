@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.mfh.mjl.mmlibrary.R;
+import com.mfh.mjl.mmlibrary.timeSelect.TimeSelectActivity;
 import com.mfh.mjl.mmlibrary.viewpager.VPDemoActivity;
 
 /**
@@ -29,11 +30,7 @@ public class TotalUtil implements View.OnClickListener {
     }
 
     public void setOnClick(View view) {
-        if (view != null) {
-            view.setOnClickListener(this);
-        } else {
-            Log.e(TAG, "setOnClick: 你设置点击事件的这个东西是，空的");
-        }
+        view.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +38,9 @@ public class TotalUtil implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.btn_jump_vp:
                 VPDemoActivity.start(context);
+                break;
+            case R.id.btn_time_select:
+                TimeSelectActivity.start(context);
                 break;
         }
     }

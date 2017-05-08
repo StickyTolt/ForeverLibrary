@@ -8,4 +8,13 @@
         <item name="android:layout_margin">@dimen/dis_e_1</item>
         <item name="android:background">@drawable/bg_btn_blue_8</item>
     </style>
+
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
 </resources>

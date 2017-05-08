@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 /**
- * Created by dell on 2017/5/4.
+ * Martin on 2017/5/4.
  */
 
 public class TotalShowActivity extends TotalActivity {

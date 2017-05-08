@@ -3,21 +3,25 @@ package com.youhuikeji.martin.alllibrary.useView.vpUtils;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 /**
  * Martin on 2017/5/4.
  */
-
-public class VpUtil {
+public class VpUtil<T> {
     private static final String TAG = VpUtil.class.getSimpleName();
 
+    /**
+     * 这个Map的作用在于
+     * Loop的ViewPager可能会有很多个，那么需要有个容器来存储ViewPager
+     * Map就是那个容器
+     */
     private Map<Integer, ViewPager> vpMap = new HashMap<>();
 
     private static VpUtil assist;
@@ -52,8 +56,9 @@ public class VpUtil {
         }
     };
 
+
     /**
-     * 设置ViewPager的轮询
+     * 设置ViewPager的轮旬
      * 需要做数据头尾添加
      *
      * @param vp    ViewPager
@@ -73,6 +78,8 @@ public class VpUtil {
             return;
         }
 
+
+
         vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             int position;
@@ -91,6 +98,11 @@ public class VpUtil {
 
             @Override
             public void onPageScrollStateChanged(int state) {
+                /**
+                 * state是ViewPager的滚动状态
+                 * 0是停止状态，1是滚动状态
+                 * 当ViewPager停止滚动的时候，我们进行无动画切换，更加流畅
+                 */
                 if (state == 0) {
                     if (position == 0) {
                         vp.setCurrentItem(size - 2, false);

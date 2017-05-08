@@ -3,8 +3,8 @@ package com.mfh.mjl.mmlibrary.viewpager;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.mfh.mjl.mmlibrary.R;
@@ -12,6 +12,7 @@ import com.youhuikeji.martin.alllibrary.base.UI;
 
 public class VPDemoActivity extends UI {
 
+    private static final String TAG = VPDemoActivity.class.getSimpleName();
     private ViewPager vpTop;
     private VPDemoUtil assist;
 
@@ -36,7 +37,6 @@ public class VPDemoActivity extends UI {
         assist = VPDemoUtil.getInstance(this);
 
         assist.setTopVp(vpTop);
-
     }
 
     @Override
@@ -54,4 +54,5 @@ public class VPDemoActivity extends UI {
     public void stopLoop(View view) {
         assist.stopVpLoop(VPDemoUtil.CODE_VP_TOP);
     }
+
 }

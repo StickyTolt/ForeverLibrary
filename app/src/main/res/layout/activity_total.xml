@@ -16,6 +16,11 @@
             style="@style/btn_max_y"
             android:text="ViewPager的使用" />
 
+        <Button
+            android:id="@+id/btn_time_select"
+            style="@style/btn_max_y"
+            android:text="时间选择器" />
+
 
     </LinearLayout>
 

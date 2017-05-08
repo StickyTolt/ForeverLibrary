@@ -13,9 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by dell on 2017/5/4.
+ * Martin on 2017/5/4.
  */
-
 public class VPDemoUtil {
 
     private static final String TAG = VPDemoUtil.class.getSimpleName();
@@ -53,6 +52,7 @@ public class VPDemoUtil {
         vp.setAdapter(new TopResAdapter(getTopData()));
         assist.setVpLoop(vp, CODE_VP_TOP, 3000);
         setVpClick(vp);
+        vp.setCurrentItem(1);
     }
 
     public void setVpClick(ViewPager vp) {

@@ -8,4 +8,8 @@
     <color name="green">#00ff00</color>
     <color name="blue_normal">#20B7F1</color>
 
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+    <color name="split_line">#11112233</color>
+
 </resources>

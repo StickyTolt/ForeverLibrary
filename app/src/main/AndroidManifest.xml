@@ -22,7 +22,8 @@
         <activity android:name=".Demo01Activity" />
         <activity android:name=".total.TotalActivity" />
         <activity android:name=".total.TotalShowActivity" />
-        <activity android:name=".viewpager.VPDemoActivity"></activity>
+        <activity android:name=".viewpager.VPDemoActivity" />
+        <activity android:name=".timeSelect.TimeSelectActivity"></activity>
     </application>
 
 </manifest>
