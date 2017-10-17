@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import com.mfh.mjl.mmlibrary.R;
 import com.mfh.mjl.mmlibrary.viewpager.adapter.TopResAdapter;
-import com.youhuikeji.martin.alllibrary.useView.vpUtils.VpUtil;
+import com.youhuikeji.martin.alllibrary.util.useView.vpUtils.VpUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +50,7 @@ public class VPDemoUtil {
 
     public void setTopVp(ViewPager vp) {
         vp.setAdapter(new TopResAdapter(getTopData()));
-        assist.setVpLoop(vp, CODE_VP_TOP, 3000);
+        setVpLoop(vp, CODE_VP_TOP, 3000);
         setVpClick(vp);
         vp.setCurrentItem(1);
     }

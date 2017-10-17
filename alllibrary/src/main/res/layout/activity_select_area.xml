@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.youhuikeji.martin.alllibrary.activity.SelectAreaActivity">
+
+    <include layout="@layout/d_include_top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lv_province"
+            android:layout_width="0dp"
+            android:scrollbars="none"
+            android:divider="@color/orange_small"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:background="@color/orange"
+            android:layout_height="match_parent"/>
+
+        <ListView
+            android:id="@+id/lv_city"
+            android:layout_width="0dp"
+            android:divider="@color/orange_small"
+            android:scrollbars="none"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:background="@color/orange"
+            android:layout_height="match_parent"/>
+
+        <ListView
+            android:id="@+id/lv_county"
+            android:layout_width="0dp"
+            android:scrollbars="none"
+            android:divider="@color/orange_small"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_normal"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="确认选择"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

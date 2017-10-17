@@ -5,9 +5,9 @@ import android.util.Log;
 import android.widget.Button;
 
 import com.mfh.mjl.mmlibrary.R;
-import com.youhuikeji.martin.alllibrary.base.UI;
+import com.youhuikeji.martin.alllibrary.base.BaseActivity;
 
-public class TotalActivity extends UI {
+public class TotalActivity extends BaseActivity {
 
     private static final String TAG = TotalActivity.class.getSimpleName();
 

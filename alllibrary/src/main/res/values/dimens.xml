@@ -10,5 +10,8 @@
     <dimen name="dis_e_7">56dp</dimen>
     <dimen name="dis_e_8">64dp</dimen>
     <dimen name="dis_e_9">72dp</dimen>
+    <dimen name="spacing_four">4dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 
 </resources>

@@ -8,9 +8,9 @@ import android.util.Log;
 import android.view.View;
 
 import com.mfh.mjl.mmlibrary.R;
-import com.youhuikeji.martin.alllibrary.base.UI;
+import com.youhuikeji.martin.alllibrary.base.BaseActivity;
 
-public class VPDemoActivity extends UI {
+public class VPDemoActivity extends BaseActivity {
 
     private static final String TAG = VPDemoActivity.class.getSimpleName();
     private ViewPager vpTop;

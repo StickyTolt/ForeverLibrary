@@ -38,7 +38,8 @@
             android:padding="10dp"
             android:text="@string/ok"
             android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_alignParentRight="true" />
 
     </RelativeLayout>
 
@@ -62,7 +63,7 @@
             android:paddingRight="20dp"
             android:paddingTop="15dp">
 
-            <com.youhuikeji.martin.alllibrary.widget.timeSelect.DatePickerView
+            <com.youhuikeji.martin.alllibrary.view.timeSelect.DatePickerView
                 android:id="@+id/year_pv"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
@@ -77,7 +78,7 @@
                 android:textColor="@color/text2"
                 android:textSize="18sp" />
 
-            <com.youhuikeji.martin.alllibrary.widget.timeSelect.DatePickerView
+            <com.youhuikeji.martin.alllibrary.view.timeSelect.DatePickerView
                 android:id="@+id/month_pv"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
@@ -92,7 +93,7 @@
                 android:textColor="@color/text2"
                 android:textSize="18sp" />
 
-            <com.youhuikeji.martin.alllibrary.widget.timeSelect.DatePickerView
+            <com.youhuikeji.martin.alllibrary.view.timeSelect.DatePickerView
                 android:id="@+id/day_pv"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
@@ -107,7 +108,7 @@
                 android:textColor="@color/text2"
                 android:textSize="18sp" />
 
-            <com.youhuikeji.martin.alllibrary.widget.timeSelect.DatePickerView
+            <com.youhuikeji.martin.alllibrary.view.timeSelect.DatePickerView
                 android:id="@+id/hour_pv"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
@@ -123,7 +124,7 @@
                 android:textColor="@color/text2"
                 android:textSize="18sp" />
 
-            <com.youhuikeji.martin.alllibrary.widget.timeSelect.DatePickerView
+            <com.youhuikeji.martin.alllibrary.view.timeSelect.DatePickerView
                 android:id="@+id/minute_pv"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
@@ -138,7 +139,6 @@
                 android:text="@string/minute"
                 android:textColor="@color/text2"
                 android:textSize="18sp" />
-
         </LinearLayout>
 
     </RelativeLayout>

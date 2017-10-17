@@ -9,15 +9,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mfh.mjl.mmlibrary.R;
-import com.youhuikeji.martin.alllibrary.base.UI;
-import com.youhuikeji.martin.alllibrary.widget.timeSelect.CustomDatePicker;
-import com.youhuikeji.martin.alllibrary.widget.timeSelect.TimeSelectUtil;
+import com.youhuikeji.martin.alllibrary.base.BaseActivity;
+import com.youhuikeji.martin.alllibrary.view.timeSelect.CustomDatePicker;
+import com.youhuikeji.martin.alllibrary.view.timeSelect.TimeSelectUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class TimeSelectActivity extends UI implements View.OnClickListener {
+public class TimeSelectActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView currentDate, currentTime;
     private CustomDatePicker customDatePicker1, customDatePicker2;

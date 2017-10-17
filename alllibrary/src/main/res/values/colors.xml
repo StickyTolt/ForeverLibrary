@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#2eb6b9</color>
+    <color name="colorPrimaryDark">#2eb6b9</color>
+    <color name="colorAccent">#2eb6b9</color>
 
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
     <color name="red">#ff0000</color>
     <color name="blue">#0000ff</color>
     <color name="green">#00ff00</color>
-    <color name="blue_normal">#20B7F1</color>
+    <color name="blue_normal">#2eb6b9</color>
+    <color name="blue_normal_small">#4be2e5</color>
 
     <color name="text1">#59B29C</color>
     <color name="text2">#333333</color>
     <color name="split_line">#11112233</color>
+
+    <color name="background">#eeeeee</color>
+    <color name="gray">#cccccc</color>
+    <color name="scan_bg">#6f000000</color>
+    <color name="gray_normal">#8a8a8a</color>
+    <color name="colorGray">#33000000</color>
+
+    <color name="orange">#ff7722</color>
+    <color name="orange_small">#FFE4B5</color>
+    <color name="font_black_6">#e0e0e0</color>
+
+    <color name="left_ball_color">#7f01020a</color>
+    <color name="right_ball_color">#7f01020b</color>
+    <color name="item_hover">#dbdbdb</color>
+
+    <color name="blue_send">#64c8f1</color>
+
 
 </resources>
