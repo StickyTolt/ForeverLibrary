@@ -25,12 +25,5 @@ public class App extends BaseApplication {
 
         app = this;
         ToolCache.init(this);
-
-        /*
-           解决 7.0 uri 暴露异常
-         */
-        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-        StrictMode.setVmPolicy(builder.build());
-        builder.detectFileUriExposure();
     }
 }

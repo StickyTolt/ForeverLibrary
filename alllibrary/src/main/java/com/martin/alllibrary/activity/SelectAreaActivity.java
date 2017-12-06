@@ -20,8 +20,6 @@ import com.martin.alllibrary.extras.ExtraName;
 
 import java.util.List;
 
-import butterknife.ButterKnife;
-
 public class SelectAreaActivity extends BaseActivity {
 
     private ImageView imgTopBack;
@@ -47,7 +45,6 @@ public class SelectAreaActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_area);
-        ButterKnife.bind(this);
 
         init();
     }

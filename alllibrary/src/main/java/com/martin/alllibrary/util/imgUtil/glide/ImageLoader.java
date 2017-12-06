@@ -10,19 +10,19 @@ import com.bumptech.glide.Glide;
 import com.martin.alllibrary.ToolCache;
 import com.martin.alllibrary.R;
 
-public class ImageManager {
+public class ImageLoader {
 
     public static final String ANDROID_RESOURCE = "android.resource://";
     public static final String FOREWARD_SLASH = "/";
 
-    private ImageManager() {
+    private ImageLoader() {
     }
 
     private static class ImageManagerHolder {
-        private static ImageManager instance = new ImageManager();
+        private static ImageLoader instance = new ImageLoader();
     }
 
-    public static ImageManager getInstance() {
+    public static ImageLoader getInstance() {
         return ImageManagerHolder.instance;
     }
 

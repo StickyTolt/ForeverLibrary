@@ -23,7 +23,7 @@ import android.widget.AbsListView;
 import android.widget.ImageView;
 
 import com.martin.alllibrary.R;
-import com.martin.alllibrary.util.imgUtil.glide.ImageManager;
+import com.martin.alllibrary.util.imgUtil.glide.ImageLoader;
 
 import java.util.List;
 
@@ -61,7 +61,7 @@ public class PhotoListAdapter extends ViewHolderAdapter<PhotoListAdapter.PhotoVi
         }
 
         holder.mIvThumb.setImageResource(R.mipmap.ic_gf_default_photo);
-        ImageManager.getInstance().loadLocalImage(mActivity, path, holder.mIvThumb);
+        ImageLoader.getInstance().loadLocalImage(mActivity, path, holder.mIvThumb);
 
 
     }

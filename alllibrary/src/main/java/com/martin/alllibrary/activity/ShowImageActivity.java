@@ -9,10 +9,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.martin.alllibrary.R;
-import com.martin.alllibrary.util.imgUtil.glide.ImageManager;
+import com.martin.alllibrary.util.imgUtil.glide.ImageLoader;
 import com.martin.alllibrary.view.TouchImageView.ImageViewTouch;
-
-import butterknife.ButterKnife;
 
 public class ShowImageActivity extends Activity implements View.OnClickListener {
 
@@ -31,7 +29,6 @@ public class ShowImageActivity extends Activity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_image);
-        ButterKnife.bind(this);
 
         initView();
     }
@@ -47,7 +44,7 @@ public class ShowImageActivity extends Activity implements View.OnClickListener 
         imgContent.setOnClickListener(this);
 
         if (imgPath != null) {
-            ImageManager.getInstance().loadUrlImage(this, imgPath, imgContent);
+            ImageLoader.getInstance().loadUrlImage(this, imgPath, imgContent);
         } else {
             Toast.makeText(this, "数据获取为空", Toast.LENGTH_SHORT).show();
         }

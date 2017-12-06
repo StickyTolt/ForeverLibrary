@@ -1,6 +1,7 @@
 package com.martin.alllibrary.base;
 
 import android.app.Application;
+import android.os.StrictMode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,8 +16,20 @@ public class BaseApplication extends Application {
 
     private static Map<String, BaseActivity> activityMap = new HashMap<>();
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        /*
+           解决 7.0 uri 暴露异常
+         */
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+        builder.detectFileUriExposure();
+    }
 
     //-----------------------------做程序的安全退出 start --------------------------------------------
+
     public static void addActivity(BaseActivity activity) {
         String simpleName = activity.getClass().getSimpleName();
         if (!activityMap.containsKey(simpleName)) {

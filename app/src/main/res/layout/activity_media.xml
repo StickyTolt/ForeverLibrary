@@ -4,23 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.mfh.mjl.mmlibrary.MainActivity">
+    tools:context="com.mfh.mjl.mmlibrary.activity.MediaActivity">
 
     <include layout="@layout/include_top_bar" />
 
     <Button
-        android:id="@+id/btn_vp_util"
+        android:id="@+id/btn_photo"
         style="@style/btn_max_y"
-        android:text="ViewPagerUtils" />
+        android:text="Media" />
 
-    <Button
-        android:id="@+id/btn_time_select"
-        style="@style/btn_max_y"
-        android:text="TimeSelect" />
 
-    <Button
-        android:id="@+id/btn_media"
-        style="@style/btn_max_y"
-        android:text="MediaUtil" />
 
 </LinearLayout>

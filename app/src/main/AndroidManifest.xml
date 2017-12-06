@@ -18,32 +18,13 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".TestActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".total.TotalActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".total.TotalShowActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".viewpager.VPDemoActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".timeSelect.TimeSelectActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".LibraryUse.activity.VideoUseActivity"
-            android:screenOrientation="portrait"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".LibraryUse.activity.PhotoActivity"
-            android:screenOrientation="portrait"
-            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".activity.ViewPagerCircleActivity" />
+        <activity android:name=".activity.TimeSelectActivity" />
+        <activity android:name=".activity.MediaActivity"></activity>
     </application>
 
 </manifest>

@@ -11,18 +11,6 @@ public class TimeSelectUtil {
 
     private static final String TAG = TimeSelectUtil.class.getSimpleName();
 
-    private static TimeSelectUtil assist;
-
-    private TimeSelectUtil() {
-    }
-
-    public static TimeSelectUtil getInstance() {
-        if (assist == null) {
-            assist = new TimeSelectUtil();
-        }
-        return assist;
-    }
-
     /**
      * 事件选择器
      * 初始化工具
@@ -35,7 +23,7 @@ public class TimeSelectUtil {
      * @param isLoop           是否循环
      * @return 时间选择器对象
      */
-    public CustomDatePicker getPicker(Context context, CustomDatePicker.ResultHandler handler, String startData, String endData, boolean showSpecificTime, boolean isLoop) {
+    public static CustomDatePicker getPicker(Context context, CustomDatePicker.ResultHandler handler, String startData, String endData, boolean showSpecificTime, boolean isLoop) {
         CustomDatePicker datePicker = new CustomDatePicker(context, handler, startData, endData);
         datePicker.setIsLoop(isLoop);
         datePicker.showSpecificTime(showSpecificTime);
@@ -48,7 +36,7 @@ public class TimeSelectUtil {
      * 带有时分，默认循环
      * 可以获取picker后设置取消
      */
-    public CustomDatePicker getPicker(Context context, CustomDatePicker.ResultHandler handler) {
+    public static CustomDatePicker getPicker(Context context, CustomDatePicker.ResultHandler handler) {
         CustomDatePicker picker = new CustomDatePicker(context, handler, "1994-01-01 00:00", "2100-01-01 00:00");
         return picker;
     }

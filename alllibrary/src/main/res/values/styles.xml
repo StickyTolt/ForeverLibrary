@@ -4,7 +4,7 @@
     <style name="btn_max_y">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/main_color</item>
         <item name="android:layout_margin">@dimen/dis_e_1</item>
         <item name="android:background">@drawable/bg_btn_blue_8</item>
     </style>

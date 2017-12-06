@@ -6,6 +6,9 @@ import android.support.v4.view.ViewPager;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.martin.alllibrary.extras.ExtraCode;
+import com.martin.alllibrary.util.showUtil.LogUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -13,27 +16,12 @@ import java.util.Set;
 /**
  * Martin on 2017/5/4.
  */
-public class ViewPagerUtils<T> {
+public class ViewPagerUtils {
+
     private static final String TAG = ViewPagerUtils.class.getSimpleName();
 
-    /**
-     * 这个Map的作用在于
-     * Loop的ViewPager可能会有很多个，那么需要有个容器来存储ViewPager
-     * Map就是那个容器
-     */
-    private Map<Integer, ViewPager> vpMap = new HashMap<>();
-
-    private static ViewPagerUtils assist;
-
-    private ViewPagerUtils() {
-    }
-
-    public static ViewPagerUtils getInstance() {
-        if (assist == null) {
-            assist = new ViewPagerUtils();
-        }
-        return assist;
-    }
+    private ViewPager viewPager;
+    private boolean isLoop = false;
 
     /**
      * 专属用来loop的handler，不做其他使用
@@ -42,16 +30,13 @@ public class ViewPagerUtils<T> {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-
-            if (vpMap != null && vpMap.size() > 0) {
-                Set<Integer> keySet = vpMap.keySet();
-
-                if (keySet.contains(msg.what)) {
-                    ViewPager pager = vpMap.get(msg.what);
-                    pager.setCurrentItem(pager.getCurrentItem() + 1);
-                }
+            switch (msg.what) {
+                case ExtraCode.EXTRA_VIEWPAGER_LOOP:
+                    if (viewPager != null) {
+                        viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+                    }
+                    break;
             }
-
         }
     };
 
@@ -61,21 +46,23 @@ public class ViewPagerUtils<T> {
      * 需要做数据头尾添加
      *
      * @param vp    ViewPager
-     * @param code  Handler发送的code，map存储的key
      * @param dTime 延迟时间
      */
-    public void setVpLoop(final ViewPager vp, final int code, final int dTime) {
-        if (vpMap == null) {
-            vpMap = new HashMap<>();
+    public void setVpLoop(final ViewPager vp, final int dTime) {
+        if (vp == null) {
+            throw new NullPointerException("the viewpager must no null");
         }
-
-        vpMap.put(code, vp);
+        viewPager = vp;
         final int size = vp.getAdapter().getCount();
 
         if (3 > size) {
             //如果里面的数据不够三页，不参与轮询
+            LogUtils.e("数据不够3条，不能开启轮询");
             return;
         }
+
+        isLoop = true;
+        vp.setCurrentItem(1);
 
         vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
@@ -89,8 +76,10 @@ public class ViewPagerUtils<T> {
             @Override
             public void onPageSelected(int position) {
                 this.position = position;
-                handler.removeMessages(code);
-                handler.sendEmptyMessageDelayed(code, dTime);
+                if (isLoop) {
+                    handler.removeMessages(ExtraCode.EXTRA_VIEWPAGER_LOOP);
+                    handler.sendEmptyMessageDelayed(ExtraCode.EXTRA_VIEWPAGER_LOOP, dTime);
+                }
             }
 
             @Override
@@ -114,15 +103,21 @@ public class ViewPagerUtils<T> {
     /**
      * 开始轮询
      */
-    public void startLoop(int code) {
-        handler.sendEmptyMessageDelayed(code, 3000);
+    public void startLoop() {
+        startLoop(1500);
+    }
+
+    public void startLoop(int dTime) {
+        isLoop = true;
+        handler.sendEmptyMessageDelayed(ExtraCode.EXTRA_VIEWPAGER_LOOP, dTime);
     }
 
     /**
      * 停止轮询
      */
-    public void stopLoop(int code) {
-        handler.removeMessages(code);
+    public void stopLoop() {
+        isLoop = false;
+        handler.removeMessages(ExtraCode.EXTRA_VIEWPAGER_LOOP);
     }
 
     /**
@@ -132,6 +127,7 @@ public class ViewPagerUtils<T> {
         if (vp == null) {
             return;
         }
+
         vp.setOnTouchListener(new View.OnTouchListener() {
             int flagTouch = 0;
 

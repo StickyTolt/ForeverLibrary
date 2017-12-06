@@ -12,6 +12,12 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+
     }
     buildTypes {
         release {
@@ -31,17 +37,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    //noinspection GradleCompatible
-    //noinspection GradleCompatible
 
-
+    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.jakewharton:butterknife-compiler:8.6.0'
-    compile 'com.jakewharton:butterknife:8.6.0'
-    testCompile 'junit:junit:4.12'
-
 
     compile "io.reactivex.rxjava2:rxjava:+"
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'

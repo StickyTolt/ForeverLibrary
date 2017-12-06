@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.mfh.mjl.mmlibrary.viewpager.VPDemoActivity">
+    tools:context="com.mfh.mjl.mmlibrary.activity.ViewPagerCircleActivity">
+
+    <include layout="@layout/include_top_bar" />
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/vp_top"
+        android:id="@+id/vp_content"
         android:layout_width="match_parent"
-        android:layout_height="240dp" />
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/dis_e_1" />
 
     <Button
+        android:id="@+id/btn_stop_start"
         style="@style/btn_max_y"
-        android:text="测试关闭轮询按钮"
-        android:onClick="stopLoop"
-        />
+        android:text="stop/start" />
+
 </LinearLayout>
