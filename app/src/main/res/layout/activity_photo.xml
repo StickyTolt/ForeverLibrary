@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mfh.mjl.mmlibrary.LibraryUse.activity.PhotoActivity">
+
+    <Button
+        android:id="@+id/btn_pick_photo"
+        style="@style/btn_max_y"
+        android:text="选择图片" />
+
+    <Button
+        android:id="@+id/btn_take_photo"
+        style="@style/btn_max_y"
+        android:text="拍摄图片" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/img_content"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

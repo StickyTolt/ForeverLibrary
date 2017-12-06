@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="dis_e_0.5">4dp</dimen>
     <dimen name="dis_e_1">8dp</dimen>
+    <dimen name="dis_e_1.5">12dp</dimen>
     <dimen name="dis_e_2">16dp</dimen>
     <dimen name="dis_e_3">24dp</dimen>
     <dimen name="dis_e_4">32dp</dimen>
@@ -10,6 +12,7 @@
     <dimen name="dis_e_7">56dp</dimen>
     <dimen name="dis_e_8">64dp</dimen>
     <dimen name="dis_e_9">72dp</dimen>
+
     <dimen name="spacing_four">4dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

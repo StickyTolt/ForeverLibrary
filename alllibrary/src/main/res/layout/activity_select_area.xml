@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.youhuikeji.martin.alllibrary.activity.SelectAreaActivity">
+    tools:context="com.martin.alllibrary.activity.SelectAreaActivity">
 
-    <include layout="@layout/d_include_top_bar" />
+    <include layout="@layout/include_top_bar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
         android:id="@+id/txt_confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue_normal"
+        android:background="@color/main_color"
         android:gravity="center"
         android:padding="20dp"
         android:text="确认选择"

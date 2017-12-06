@@ -1,12 +1,16 @@
 package com.mfh.mjl.mmlibrary.total;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 
+import com.mfh.mjl.mmlibrary.LibraryUse.activity.PhotoActivity;
+import com.mfh.mjl.mmlibrary.LibraryUse.activity.VideoUseActivity;
 import com.mfh.mjl.mmlibrary.R;
 import com.mfh.mjl.mmlibrary.timeSelect.TimeSelectActivity;
 import com.mfh.mjl.mmlibrary.viewpager.VPDemoActivity;
+import com.martin.alllibrary.activity.EditActivity;
+import com.martin.alllibrary.extras.ExtraName;
+import com.martin.alllibrary.util.storeUtils.FileStoreUtil.FileStoreUtil;
 
 /**
  * Martin on 2017/5/4.
@@ -41,6 +45,16 @@ public class TotalUtil implements View.OnClickListener {
                 break;
             case R.id.btn_time_select:
                 TimeSelectActivity.start(context);
+                break;
+            case R.id.btn_video:
+                VideoUseActivity.start(context);
+                break;
+            case R.id.btn_photo:
+                PhotoActivity.start(context);
+                break;
+            case R.id.btn_test:
+                FileStoreUtil.getInstance().saveStr("zhegeyangzi nengnslkdhklajdlf", ExtraName.EXTRA_DATA, context);
+                EditActivity.start(context);
                 break;
         }
     }

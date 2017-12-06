@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mfh.mjl.mmlibrary.Demo01Activity">
+    android:orientation="vertical"
+    tools:context="com.mfh.mjl.mmlibrary.TestActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        style="@style/btn_max_y"
+        android:onClick="clickOne"
+        android:text="继承Thread" />
+
+    <Button
+        style="@style/btn_max_y"
+        android:onClick="clickTwo"
+        android:text="实现Runnable" />
+
+    <Button
+        style="@style/btn_max_y"
+        android:onClick="clickThree"
+        android:text="实现Runnable 添加名字" />
+
+</LinearLayout>

@@ -1,11 +1,10 @@
 package com.mfh.mjl.mmlibrary.total;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 
 import com.mfh.mjl.mmlibrary.R;
-import com.youhuikeji.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.BaseActivity;
 
 public class TotalActivity extends BaseActivity {
 
@@ -13,9 +12,9 @@ public class TotalActivity extends BaseActivity {
 
     private Button btnJumpVp;
     private Button btnTimeSelect;
-
-    private TotalUtil assist;
-
+    private Button btnVideo;
+    private Button btnPhoto;
+    private Button btnTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +29,19 @@ public class TotalActivity extends BaseActivity {
     protected void bindView() {
         btnJumpVp = findView(R.id.btn_jump_vp);
         btnTimeSelect = findView(R.id.btn_time_select);
+        btnVideo = findView(R.id.btn_video);
+        btnPhoto = findView(R.id.btn_photo);
+        btnTest = findView(R.id.btn_test);
     }
 
     protected void initView() {
-        assist = TotalUtil.getInstance(this);
+        TotalUtil assist = TotalUtil.getInstance(this);
 
         assist.setOnClick(btnJumpVp);
         assist.setOnClick(btnTimeSelect);
+        assist.setOnClick(btnVideo);
+        assist.setOnClick(btnPhoto);
+        assist.setOnClick(btnTest);
     }
 
 }

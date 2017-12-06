@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import com.mfh.mjl.mmlibrary.R;
 import com.mfh.mjl.mmlibrary.viewpager.adapter.TopResAdapter;
-import com.youhuikeji.martin.alllibrary.util.useView.vpUtils.VpUtil;
+import com.martin.alllibrary.util.viewUtils.vpUtils.ViewPagerUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,15 +37,15 @@ public class VPDemoUtil {
     }
 
     public void setVpLoop(ViewPager vp, int code, int dTime) {
-        VpUtil.getInstance().setVpLoop(vp, code, dTime);
+        ViewPagerUtils.getInstance().setVpLoop(vp, code, dTime);
     }
 
     public void startVpLoop(int code) {
-        VpUtil.getInstance().startLoop(code);
+        ViewPagerUtils.getInstance().startLoop(code);
     }
 
     public void stopVpLoop(int code) {
-        VpUtil.getInstance().stopLoop(code);
+        ViewPagerUtils.getInstance().stopLoop(code);
     }
 
     public void setTopVp(ViewPager vp) {
@@ -56,7 +56,7 @@ public class VPDemoUtil {
     }
 
     public void setVpClick(ViewPager vp) {
-        VpUtil.getInstance().setVpClick(vp, new VpUtil.IVpClickListener() {
+        ViewPagerUtils.getInstance().setVpClick(vp, new ViewPagerUtils.IVpClickListener() {
             @Override
             public void onClick(int position) {
                 Toast.makeText(context, "onClick: 你点击的条目是    ===    " + position, Toast.LENGTH_SHORT).show();

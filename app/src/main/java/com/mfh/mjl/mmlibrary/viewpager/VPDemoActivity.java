@@ -4,11 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.mfh.mjl.mmlibrary.R;
-import com.youhuikeji.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.BaseActivity;
 
 public class VPDemoActivity extends BaseActivity {
 

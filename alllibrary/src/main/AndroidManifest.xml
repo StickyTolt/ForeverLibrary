@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.youhuikeji.martin.alllibrary">
+    package="com.martin.alllibrary">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
-        <activity android:name=".activity.SelectAreaActivity"
-            android:screenOrientation="portrait"/>
+        android:supportsRtl="true">
 
         <activity
-            android:name="com.youhuikeji.martin.alllibrary.activity.ShowAVActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape" -->
+            android:name=".activity.SelectAreaActivity"
+            android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.youhuikeji.martin.alllibrary.activity.ShowImageActivity"
+            android:name=".activity.ShowImageActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
+        <activity
+            android:name=".util.mediaUtil.videoUtil.VideoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PhotoSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

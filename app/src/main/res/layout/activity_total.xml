@@ -21,6 +21,20 @@
             style="@style/btn_max_y"
             android:text="时间选择器" />
 
+        <Button
+            android:id="@+id/btn_video"
+            style="@style/btn_max_y"
+            android:text="视频工具" />
+
+        <Button
+            android:id="@+id/btn_photo"
+            style="@style/btn_max_y"
+            android:text="图片工具" />
+
+        <Button
+            android:id="@+id/btn_test"
+            style="@style/btn_max_y"
+            android:text="测试按钮 last" />
 
     </LinearLayout>
 

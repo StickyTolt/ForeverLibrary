@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#86000000"
-    tools:context="com.youhuikeji.martin.alllibrary.activity.ShowImageActivity">
+    tools:context="com.martin.alllibrary.activity.ShowImageActivity">
 
 
-    <com.youhuikeji.martin.alllibrary.view.TouchImageView.ImageViewTouch
+    <com.martin.alllibrary.view.TouchImageView.ImageViewTouch
         android:id="@+id/img_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
