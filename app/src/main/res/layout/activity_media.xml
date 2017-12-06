@@ -9,10 +9,26 @@
     <include layout="@layout/include_top_bar" />
 
     <Button
-        android:id="@+id/btn_photo"
+        android:id="@+id/btn_media"
         style="@style/btn_max_y"
         android:text="Media" />
 
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
+    <Button
+        android:id="@+id/btn_upload_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UploadFirst" />
+
+    <Button
+        android:id="@+id/btn_upload_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UploadAll" />
 
 </LinearLayout>

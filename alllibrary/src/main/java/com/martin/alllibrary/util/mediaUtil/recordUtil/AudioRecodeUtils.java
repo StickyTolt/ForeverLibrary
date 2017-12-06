@@ -5,6 +5,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 
+import com.martin.alllibrary.ToolCache;
 import com.martin.alllibrary.util.systemUtil.TimeUtil;
 
 import java.io.File;
@@ -31,8 +32,8 @@ public class AudioRecodeUtils {
      * 文件存储默认sdcard/record
      */
     public AudioRecodeUtils(){
-        //默认保存路径为/sdcard/record/下
-        this(Environment.getExternalStorageDirectory()+"/record/");
+        //默认保存路径为/sdcard/Android/Data/包名/music/record/下
+        this(ToolCache.getContext().getExternalFilesDir(Environment.DIRECTORY_MUSIC)+"/record/");
     }
 
     public AudioRecodeUtils(String filePath) {

@@ -64,7 +64,7 @@ public class ActionSheet extends Dialog implements OnClickListener {
     /**
      * 显示dialog 方法
      */
-    public static void showSheetDialog(Context context, String cancelTitle, String[] items, MenuItemClickListener listener, boolean cancelable) {
+    public static void showSheetDialog(Context context, String cancelTitle, String[] items, boolean cancelable, MenuItemClickListener listener) {
         context.setTheme(R.style.ActionSheetStyleIOS7);
         ActionSheet menuView = new ActionSheet(context);
         menuView.setCancelButtonTitle(cancelTitle);// before add items
@@ -77,9 +77,9 @@ public class ActionSheet extends Dialog implements OnClickListener {
     /**
      * 显示dialog 方法
      */
-    public static void showSheetDialog(Context context, String cancelTitle, List<String> items, MenuItemClickListener listener, boolean cancelable) {
+    public static void showSheetDialog(Context context, String cancelTitle, List<String> items, boolean cancelable, MenuItemClickListener listener) {
         String[] arr = items.toArray(new String[items.size()]);
-        showSheetDialog(context, cancelTitle, arr, listener, cancelable);
+        showSheetDialog(context, cancelTitle, arr, cancelable, listener);
     }
 
     public void initViews() {
@@ -402,7 +402,7 @@ public class ActionSheet extends Dialog implements OnClickListener {
     }
 
     public static interface MenuItemClickListener {
-        void onItemClick(int itemPosition);
+        void onItemClick(int position);
     }
 
 }

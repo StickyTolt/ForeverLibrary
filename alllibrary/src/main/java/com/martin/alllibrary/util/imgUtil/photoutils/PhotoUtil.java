@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import android.text.format.DateFormat;
 import android.util.Log;
 
+import com.martin.alllibrary.ToolCache;
 import com.martin.alllibrary.activity.PhotoSelectActivity;
 import com.martin.alllibrary.util.imgUtil.photoutils.util.StorePhotos;
 import com.martin.alllibrary.view.ActionSheet;
@@ -45,7 +46,7 @@ public class PhotoUtil {
     }
 
     public static String takePhotoStr(Activity activity, int codeTake) {
-        String fileName = getPhotoPath(".png", "ZYDHImage");//参数分别为   格式，存放的文件夹名
+        String fileName = getPhotoPath(".png", "ToolImg");//参数分别为   格式，存放的文件夹名
         Log.e(TAG, "onClick:   获取的 文件地址   " + fileName);
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
@@ -89,7 +90,7 @@ public class PhotoUtil {
             , final int takeCode, final OnTakePhotoBackUri backUri) {
 
         ActionSheet.showSheetDialog(activity, "取消", new String[]{"选择照片", "拍照"}
-                , new ActionSheet.MenuItemClickListener() {
+                , false, new ActionSheet.MenuItemClickListener() {
                     @Override
                     public void onItemClick(int itemPosition) {
                         switch (itemPosition) {
@@ -104,17 +105,20 @@ public class PhotoUtil {
                                 break;
                         }
                     }
-                }, false);
+                });
     }
 
     public interface OnTakePhotoBackUri {
         void onTake(Uri uri);
     }
+
     @SuppressLint("SdCardPath")
     private static String getPhotoPath(String form, String Name) {
         String name = DateFormat.format("yyyyMMdd_hhmmss", Calendar.getInstance(Locale.CHINA)) + form;
-        String fileName = "/sdcard/" + Name + "/" + name;
-        File file = new File("/sdcard/" + Name + "/");
+        String externalPath = ToolCache.getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString();
+        String pathname = externalPath + "/" + Name + "/";
+        String fileName = pathname + name;
+        File file = new File(pathname);
         if (!file.exists()) {
             Log.e("TAG", "第一次创建文件夹");
             file.mkdirs();// 如果文件夹不存在，则创建文件夹
