@@ -2,7 +2,6 @@ package com.martin.alllibrary.netUtil.basic;
 
 import android.app.Activity;
 import android.text.TextUtils;
-import android.widget.Toast;
 
 import com.google.gson.JsonParseException;
 import com.jakewharton.retrofit2.adapter.rxjava2.HttpException;
@@ -55,7 +54,7 @@ public abstract class DefaultObserver<T extends BasicResponse> implements Observ
     @Override
     public void onNext(T response) {
         dismissProgress();
-        if (!response.isError()) {
+        if (response.isSuccess()) {
             onSuccess(response);
         } else {
             onFail(response);
@@ -110,7 +109,7 @@ public abstract class DefaultObserver<T extends BasicResponse> implements Observ
      * @param response 服务器返回的数据
      */
     public void onFail(T response) {
-        String message = response.getMessage();
+        String message = response.getMsg();
         if (TextUtils.isEmpty(message)) {
             ToastUtils.show(R.string.response_return_error);
         } else {

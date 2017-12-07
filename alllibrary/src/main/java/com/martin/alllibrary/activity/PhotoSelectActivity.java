@@ -12,6 +12,8 @@ import android.widget.GridView;
 
 import com.martin.alllibrary.R;
 import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.extras.ExtraCode;
+import com.martin.alllibrary.extras.ExtraName;
 import com.martin.alllibrary.util.imgUtil.photoutils.util.DeviceUtil;
 import com.martin.alllibrary.util.imgUtil.photoutils.util.FilenameUtils;
 import com.martin.alllibrary.util.imgUtil.photoutils.util.PhotoFolderInfo;
@@ -69,7 +71,7 @@ public class PhotoSelectActivity extends BaseActivity {
                 if ((ext.equalsIgnoreCase("png")
                         || ext.equalsIgnoreCase("jpg") || ext.equalsIgnoreCase("jpeg"))) {
                     Intent intent = new Intent();
-                    intent.putExtra("imgPath", info.getPhotoPath());
+                    intent.putExtra(ExtraName.EXTRA_DATA, info.getPhotoPath());
                     setResult(RESULT_OK, intent);
                     finish();
                 } else {

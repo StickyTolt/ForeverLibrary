@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlins.FirstKotlinActivity">
+
+    <include layout="@layout/include_top_bar" />
+
+    <Button
+        android:id="@+id/btn_toast"
+        style="@style/btn_max_y"
+        android:text="Show Toast" />
+
+    <Button
+        android:id="@+id/btn_dialog"
+        style="@style/btn_max_y"
+        android:text="Show Dialog" />
+
+</LinearLayout>

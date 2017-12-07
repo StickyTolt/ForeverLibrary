@@ -8,8 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.martin.alllibrary.base.BaseActivity;
+import com.mfh.mjl.mmlibrary.activity.MediaActivity;
+import com.mfh.mjl.mmlibrary.activity.NetApplyActivity;
+import com.mfh.mjl.mmlibrary.activity.TestActivity;
 import com.mfh.mjl.mmlibrary.activity.TimeSelectActivity;
 import com.mfh.mjl.mmlibrary.activity.ViewPagerCircleActivity;
+import com.mfh.mjl.mmlibrary.kotlins.FirstKotlinActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +34,10 @@ public class MainActivity extends BaseActivity {
     Button btnTimeSelect;
     @BindView(R.id.btn_media)
     Button btnMedia;
+    @BindView(R.id.btn_net)
+    Button btnNet;
+    @BindView(R.id.btn_kotlin)
+    Button btnKotlin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +50,13 @@ public class MainActivity extends BaseActivity {
 
     private void init() {
         txtTopTitle.setText("工具库演示");
+        txtTopRight.setText("测试Activity");
         imgTopBack.setVisibility(View.GONE);
-
     }
 
 
-    @OnClick({R.id.btn_vp_util, R.id.btn_time_select, R.id.btn_media})
+    @OnClick({R.id.btn_vp_util, R.id.btn_time_select, R.id.btn_media, R.id.btn_net
+            , R.id.txt_top_right, R.id.btn_kotlin})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_vp_util:
@@ -57,7 +66,16 @@ public class MainActivity extends BaseActivity {
                 TimeSelectActivity.start(getContext());
                 break;
             case R.id.btn_media:
-
+                MediaActivity.start(getContext());
+                break;
+            case R.id.btn_net:
+                NetApplyActivity.start(getContext());
+                break;
+            case R.id.txt_top_right:
+                TestActivity.start(getContext());
+                break;
+            case R.id.btn_kotlin:
+                FirstKotlinActivity.Companion.start(getContext());
                 break;
         }
     }

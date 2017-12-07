@@ -22,9 +22,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ViewPagerCircleActivity" />
-        <activity android:name=".activity.TimeSelectActivity" />
-        <activity android:name=".activity.MediaActivity"></activity>
+        <activity
+            android:name=".activity.ViewPagerCircleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TimeSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MediaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NetApplyActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".kotlins.FirstKotlinActivity" />
     </application>
 
 </manifest>

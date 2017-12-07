@@ -6,6 +6,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.martin.alllibrary.ToolCache;
+import com.martin.alllibrary.netUtil.cookie.CookieJarImpl;
+import com.martin.alllibrary.netUtil.cookie.MyCookieStore;
 import com.martin.alllibrary.netUtil.netWork.NetworkUtils;
 import com.martin.alllibrary.util.showUtil.LogUtils;
 
@@ -39,8 +41,8 @@ public class NetApply {
             public void log(String message) {
                 try {
                     String text = URLDecoder.decode(message, "utf-8");
-                    LogUtils.e("OKHttp-----", text);
-                } catch (UnsupportedEncodingException e) {
+                    LogUtils.e("OKHttp-----", message);
+                } catch (Exception e) {
                     e.printStackTrace();
                     LogUtils.e("OKHttp-----", message);
                 }
@@ -56,6 +58,7 @@ public class NetApply {
                 .connectTimeout(API.DEFAULT_TIMEOUT, TimeUnit.MILLISECONDS)
                 .addInterceptor(interceptor)
                 .addNetworkInterceptor(new HttpCacheInterceptor())
+                .cookieJar(new CookieJarImpl(new MyCookieStore()))
                 .cache(cache)
                 .build();
 

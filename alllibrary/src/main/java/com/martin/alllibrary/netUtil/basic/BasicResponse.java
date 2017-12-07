@@ -5,40 +5,40 @@ package com.martin.alllibrary.netUtil.basic;
  */
 public class BasicResponse<T> {
 
-    private int code;
-    private String message;
-    private T results;
-    private boolean error;
+    private int errorCode;
+    private String msg;
+    private T data;
+    private boolean success;
 
-    public T getResults() {
-        return results;
+    public T getData() {
+        return data;
     }
 
-    public void setResults(T results) {
-        this.results = results;
+    public void setData(T data) {
+        this.data = data;
     }
 
-    public boolean isError() {
-        return error;
+    public boolean isSuccess() {
+        return success;
     }
 
-    public void setError(boolean error) {
-        this.error = error;
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 
-    public int getCode() {
-        return code;
+    public int getErrorCode() {
+        return errorCode;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setErrorCode(int errorCode) {
+        this.errorCode = errorCode;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 }

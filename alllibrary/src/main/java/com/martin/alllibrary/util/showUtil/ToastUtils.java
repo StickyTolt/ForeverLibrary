@@ -15,29 +15,33 @@ import com.martin.alllibrary.ToolCache;
 public class ToastUtils {
 
     private static Toast toast;
-    private static Handler mHandler=new Handler(Looper.getMainLooper());
 
-    public static void show(String msg){
-        showCustomToast(ToolCache.getContext(),msg);
+    public static void show(String msg) {
+        showCustomToast(ToolCache.getContext(), msg);
     }
 
-    public static void show(int msgRes){
-        showCustomToast(ToolCache.getContext(),ToolCache.getContext().getResources().getString(msgRes));
+    public static void show(int msgRes) {
+        showCustomToast(ToolCache.getContext(), ToolCache.getContext().getResources().getString(msgRes));
     }
 
     @SuppressLint("ShowToast")
-    public static void showCustomToast(Context context, String text) {
-        if(toast==null){
-            toast=Toast.makeText(context.getApplicationContext(),text,Toast.LENGTH_SHORT);
-        }
-        toast.setText(text);
+    public static void showCustomToast(final Context context, final String text) {
 
-        if(Looper.myLooper()==Looper.getMainLooper()){
+
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            if (toast == null) {
+                toast = Toast.makeText(context.getApplicationContext(), text, Toast.LENGTH_SHORT);
+            }
+            toast.setText(text);
             toast.show();
-        }else{
-            mHandler.post(new Runnable() {
+        } else {
+            HandlerUtils.getHandler().post(new Runnable() {
                 @Override
                 public void run() {
+                    if (toast == null) {
+                        toast = Toast.makeText(context.getApplicationContext(), text, Toast.LENGTH_SHORT);
+                    }
+                    toast.setText(text);
                     toast.show();
                 }
             });
@@ -45,25 +49,30 @@ public class ToastUtils {
     }
 
     @SuppressLint("ShowToast")
-    public static void showLongCustomToast(Context context, String text) {
-        if(toast==null){
-            toast=Toast.makeText(context.getApplicationContext(),text,Toast.LENGTH_LONG);
-        }
-        toast.setText(text);
+    public static void showLongCustomToast(final Context context, final String text) {
 
-        if(Looper.myLooper()==Looper.getMainLooper()){
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            if (toast == null) {
+                toast = Toast.makeText(context.getApplicationContext(), text, Toast.LENGTH_LONG);
+            }
+            toast.setText(text);
             toast.show();
-        }else{
-            mHandler.post(new Runnable() {
+        } else {
+            HandlerUtils.getHandler().post(new Runnable() {
                 @Override
                 public void run() {
+                    if (toast == null) {
+                        toast = Toast.makeText(context.getApplicationContext(), text, Toast.LENGTH_LONG);
+                    }
+                    toast.setText(text);
                     toast.show();
                 }
             });
         }
     }
-    public  static void cancel(){
-        if(toast!=null){
+
+    public static void cancel() {
+        if (toast != null) {
             toast.cancel();
         }
     }

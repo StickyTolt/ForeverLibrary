@@ -23,4 +23,14 @@
         style="@style/btn_max_y"
         android:text="MediaUtil" />
 
+    <Button
+        android:id="@+id/btn_net"
+        style="@style/btn_max_y"
+        android:text="RxJava+Retrofit" />
+
+    <Button
+        android:id="@+id/btn_kotlin"
+        style="@style/btn_max_y"
+        android:text="Kotlin" />
+
 </LinearLayout>

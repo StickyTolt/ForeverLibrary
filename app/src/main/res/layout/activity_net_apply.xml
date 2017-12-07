@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mfh.mjl.mmlibrary.activity.NetApplyActivity">
+
+    <include layout="@layout/include_top_bar" />
+
+    <Button
+        android:id="@+id/btn_apply_net"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply net data" />
+
+    <Button
+        android:id="@+id/btn_upload_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload first file" />
+
+    <Button
+        android:id="@+id/btn_upload_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload all file" />
+
+    <Button
+        android:id="@+id/btn_select_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select picture" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

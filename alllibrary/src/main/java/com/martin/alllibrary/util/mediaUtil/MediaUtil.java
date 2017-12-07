@@ -54,7 +54,7 @@ public class MediaUtil {
             final Activity activity, final int recordCode, final int pickCode) {
 
         ActionSheet.showSheetDialog(activity, "取消"
-                , new String[]{"拍摄视频", "选择视频"}, new ActionSheet.MenuItemClickListener() {
+                , new String[]{"拍摄视频", "选择视频"}, true, new ActionSheet.MenuItemClickListener() {
                     @Override
                     public void onItemClick(int position) {
                         if (position == 0) {
@@ -63,7 +63,7 @@ public class MediaUtil {
                             pickVideo(activity, pickCode);
                         }
                     }
-                }, true);
+                });
     }
 
 
