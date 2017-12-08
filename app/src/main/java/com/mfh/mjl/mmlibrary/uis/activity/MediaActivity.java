@@ -1,4 +1,4 @@
-package com.mfh.mjl.mmlibrary.activity;
+package com.mfh.mjl.mmlibrary.uis.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,7 +18,6 @@ import com.martin.alllibrary.view.ActionSheet;
 import com.mfh.mjl.mmlibrary.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-package com.mfh.mjl.mmlibrary.activity;
+package com.mfh.mjl.mmlibrary.uis.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.martin.alllibrary.activity.PhotoSelectActivity;
 import com.martin.alllibrary.base.BaseActivity;
 import com.martin.alllibrary.extras.ExtraCode;
 import com.martin.alllibrary.extras.ExtraName;
@@ -21,7 +20,7 @@ import com.martin.alllibrary.util.imgUtil.photoutils.PhotoUtil;
 import com.martin.alllibrary.util.misc.interfacies.OnItemClickListener;
 import com.martin.alllibrary.util.showUtil.LogUtils;
 import com.mfh.mjl.mmlibrary.R;
-import com.mfh.mjl.mmlibrary.adapter.PathListAdapter;
+import com.mfh.mjl.mmlibrary.uis.adapter.PathListAdapter;
 import com.mfh.mjl.mmlibrary.utils.net.NetApply;
 import com.mfh.mjl.mmlibrary.utils.net.model.LoginModel;
 import com.mfh.mjl.mmlibrary.utils.net.model.UploadModel;
@@ -39,14 +38,12 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
 
 public class NetApplyActivity extends BaseActivity {
 

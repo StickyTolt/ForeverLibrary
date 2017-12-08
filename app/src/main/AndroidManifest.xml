@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".App"
@@ -22,20 +23,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".activity.ViewPagerCircleActivity"
+            android:name=".uis.activity.ViewPagerCircleActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.TimeSelectActivity"
+            android:name=".uis.activity.TimeSelectActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MediaActivity"
+            android:name=".uis.activity.MediaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.NetApplyActivity"
+            android:name=".uis.activity.NetApplyActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.TestActivity" />
-        <activity android:name=".kotlins.FirstKotlinActivity" />
+        <activity
+            android:name=".uis.activity.TestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mfh.mjl.mmlibrary.uis.kotlins.activity.FirstKotlinActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".uis.kotlins.activity.ShowTextActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".uis.activity.ScanToolActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

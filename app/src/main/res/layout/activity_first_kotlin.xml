@@ -4,9 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".kotlins.FirstKotlinActivity">
+    tools:context=".uis.kotlins.activity.FirstKotlinActivity">
 
-    <include layout="@layout/include_top_bar" />
+    <include
+        android:id="@+id/in_top"
+        layout="@layout/include_top_bar" />
 
     <Button
         android:id="@+id/btn_toast"

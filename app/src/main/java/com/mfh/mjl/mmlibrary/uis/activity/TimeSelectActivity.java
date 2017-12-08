@@ -1,4 +1,4 @@
-package com.mfh.mjl.mmlibrary.activity;
+package com.mfh.mjl.mmlibrary.uis.activity;
 
 import android.content.Context;
 import android.content.Intent;

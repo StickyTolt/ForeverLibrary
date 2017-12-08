@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.mfh.mjl.mmlibrary.activity.TimeSelectActivity">
+    tools:context=".uis.activity.TimeSelectActivity">
 
     <include layout="@layout/include_top_bar" />
 

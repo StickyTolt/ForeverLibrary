@@ -33,4 +33,9 @@
         style="@style/btn_max_y"
         android:text="Kotlin" />
 
+    <Button
+        android:id="@+id/btn_scan"
+        style="@style/btn_max_y"
+        android:text="Scan QRCode" />
+
 </LinearLayout>
