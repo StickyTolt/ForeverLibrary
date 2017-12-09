@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.martin.alllibrary.activity.ShowImageActivity;
 import com.martin.alllibrary.base.BaseActivity;
 import com.martin.alllibrary.extras.ExtraCode;
 import com.martin.alllibrary.extras.ExtraName;
@@ -97,7 +98,7 @@ public class NetApplyActivity extends BaseActivity {
         adapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-
+                ShowImageActivity.start(getContext(), adapter.getItem(position));
             }
         });
     }
@@ -173,7 +174,7 @@ public class NetApplyActivity extends BaseActivity {
                             return;
                         }
                         LogUtils.e("bodyMap.size = " + bodyMap.size());
-                        NetApply.getAPI().uploadFiles(bodyMap.get("0"), bodyMap.get("1"),bodyMap.get("2"))
+                        NetApply.getAPI().uploadFiles(bodyMap.get("0"), bodyMap.get("1"), bodyMap.get("2"))
                                 .subscribeOn(Schedulers.io())
                                 .subscribe(new DefaultObserver<BasicResponse<List<UploadModel>>>(getActivity()) {
                                     @Override
