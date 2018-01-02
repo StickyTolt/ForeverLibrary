@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.mfh.mjl.mmlibrary.uis.activity.MediaActivity;
 import com.mfh.mjl.mmlibrary.uis.activity.NetApplyActivity;
 import com.mfh.mjl.mmlibrary.uis.activity.ScanToolActivity;

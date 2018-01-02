@@ -1,7 +1,7 @@
 package com.mfh.mjl.mmlibrary.uis.kotlins
 
 import android.os.Bundle
-import com.martin.alllibrary.base.BaseActivity
+import com.martin.alllibrary.base.mvc.BaseActivity
 
 /**
  * 作者：Martin on 2017/12/8 14:51

@@ -15,7 +15,7 @@ import com.martin.alllibrary.activity.adapter.SelectCityAdapter;
 import com.martin.alllibrary.activity.adapter.SelectCountyAdapter;
 import com.martin.alllibrary.activity.adapter.SelectProvinceAdapter;
 import com.martin.alllibrary.activity.model.AreaModel;
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.extras.ExtraName;
 
 import java.util.List;

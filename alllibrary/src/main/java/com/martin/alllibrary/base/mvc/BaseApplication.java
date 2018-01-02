@@ -1,4 +1,4 @@
-package com.martin.alllibrary.base;
+package com.martin.alllibrary.base.mvc;
 
 import android.app.Application;
 import android.os.StrictMode;

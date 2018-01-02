@@ -11,8 +11,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.martin.alllibrary.R;
-import com.martin.alllibrary.base.BaseActivity;
-import com.martin.alllibrary.extras.ExtraCode;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.extras.ExtraName;
 import com.martin.alllibrary.util.imgUtil.photoutils.util.DeviceUtil;
 import com.martin.alllibrary.util.imgUtil.photoutils.util.FilenameUtils;

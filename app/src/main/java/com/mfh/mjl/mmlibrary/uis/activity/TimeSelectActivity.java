@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.util.systemUtil.TimeUtil;
 import com.martin.alllibrary.view.timeSelect.CustomDatePicker;
 import com.martin.alllibrary.view.timeSelect.TimeSelectUtil;

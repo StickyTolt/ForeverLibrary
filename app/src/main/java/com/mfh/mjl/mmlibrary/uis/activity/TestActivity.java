@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.util.showUtil.LogUtils;
 import com.mfh.mjl.mmlibrary.R;
 

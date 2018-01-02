@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.util.viewUtils.vpUtils.ViewPagerImgAdapter;
 import com.martin.alllibrary.util.viewUtils.vpUtils.ViewPagerScroller;
 import com.martin.alllibrary.util.viewUtils.vpUtils.ViewPagerUtils;

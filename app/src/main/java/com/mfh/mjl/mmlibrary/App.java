@@ -1,11 +1,9 @@
 package com.mfh.mjl.mmlibrary;
 
-import android.app.Application;
 import android.content.Context;
-import android.os.StrictMode;
 
 import com.martin.alllibrary.ToolCache;
-import com.martin.alllibrary.base.BaseApplication;
+import com.martin.alllibrary.base.mvc.BaseApplication;
 
 /**
  * Martin on 2017/5/4.

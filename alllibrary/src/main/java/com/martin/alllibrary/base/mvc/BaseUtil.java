@@ -1,4 +1,4 @@
-package com.martin.alllibrary.base;
+package com.martin.alllibrary.base.mvc;
 
 import android.app.Activity;
 import android.content.Context;

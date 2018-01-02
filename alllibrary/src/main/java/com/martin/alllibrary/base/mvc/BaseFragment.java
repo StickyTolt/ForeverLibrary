@@ -1,8 +1,5 @@
-package com.martin.alllibrary.base;
+package com.martin.alllibrary.base.mvc;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -10,34 +7,14 @@ import android.widget.TextView;
 import com.martin.alllibrary.util.showUtil.KeyboardUtils;
 import com.martin.alllibrary.util.showUtil.ProgressDialogUtils;
 import com.martin.alllibrary.util.showUtil.ToastUtils;
-import com.martin.alllibrary.util.showUtil.WindowUtils;
-import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+import com.trello.rxlifecycle2.components.RxFragment;
 
-public abstract class BaseActivity extends RxAppCompatActivity {
+/**
+ * 作者：Martin on 2017/12/5 17:24
+ * 邮箱：martin0207mfh@163.com
+ */
+public class BaseFragment extends RxFragment {
 
-    private static final String TAG = BaseActivity.class.getSimpleName();
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        BaseApplication.addActivity(this);
-        Log.e(TAG, "onCreate: " + getClass().getSimpleName());
-    }
-
-    public Context getContext() {
-        return this;
-    }
-
-    public BaseActivity getActivity() {
-        return this;
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        BaseApplication.deleteActivity(this.getClass().getSimpleName());
-        ProgressDialogUtils.getInstance().hideProgress();
-    }
 
     protected void showKeyboard(boolean toShow) {
         KeyboardUtils.showKeyboard(getActivity(), toShow);
@@ -48,10 +25,6 @@ public abstract class BaseActivity extends RxAppCompatActivity {
      */
     protected void showKeyboardDelayed(View focus) {
         KeyboardUtils.showKeyboardDelayed(getActivity(), focus);
-    }
-
-    public boolean isDestroyedCompatible() {
-        return super.isDestroyed();
     }
 
     public void showProgress() {
@@ -90,20 +63,6 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         showToast(getResources().getString(res));
     }
 
-    /**
-     * 设置导航栏颜色
-     */
-    public void setWindowStatusBarColor(int colorResId) {
-        WindowUtils.setWindowStatusBarColor(colorResId, getActivity());
-    }
-
-    /**
-     * 设置 全屏
-     */
-    public void setAllScreen() {
-        WindowUtils.setAllScreen(getActivity());
-    }
-
     public String noNull(String s) {
         return s == null ? "" : s;
     }
@@ -118,10 +77,6 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         if (textView != null) {
             return textView.getText().toString().trim();
         } else return "";
-    }
-
-    protected <T extends View> T findView(int resId) {
-        return (T) (findViewById(resId));
     }
 
 }

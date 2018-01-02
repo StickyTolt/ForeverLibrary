@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 
 import com.martin.alllibrary.R;
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.extras.ExtraName;
 import com.martin.alllibrary.util.storeUtils.FileStoreUtil.FileStoreUtil;
 

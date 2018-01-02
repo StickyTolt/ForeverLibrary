@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.extras.ExtraCode;
 import com.martin.alllibrary.util.imgUtil.photoutils.PhotoUtil;
 import com.martin.alllibrary.util.mediaUtil.MediaUtil;

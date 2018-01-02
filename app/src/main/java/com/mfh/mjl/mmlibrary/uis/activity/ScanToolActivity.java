@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.zxing.Result;
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.util.zxing.Constant;
 import com.martin.alllibrary.util.zxing.ScanListener;
 import com.martin.alllibrary.util.zxing.ScanManager;

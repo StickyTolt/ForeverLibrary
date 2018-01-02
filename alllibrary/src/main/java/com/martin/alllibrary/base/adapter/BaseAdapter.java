@@ -1,4 +1,4 @@
-package com.martin.alllibrary.base;
+package com.martin.alllibrary.base.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

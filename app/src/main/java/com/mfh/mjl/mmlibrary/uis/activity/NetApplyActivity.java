@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.martin.alllibrary.activity.ShowImageActivity;
-import com.martin.alllibrary.base.BaseActivity;
+import com.martin.alllibrary.base.mvc.BaseActivity;
 import com.martin.alllibrary.extras.ExtraCode;
 import com.martin.alllibrary.extras.ExtraName;
 import com.martin.alllibrary.netUtil.basic.BasicResponse;
